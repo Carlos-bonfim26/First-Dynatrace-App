@@ -1,49 +1,55 @@
-# Getting Started with your Dynatrace App
+# Começando com seu aplicativo Dynatrace
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-This project was bootstrapped with Dynatrace App Toolkit.
+Este projeto foi inicializado com o Dynatrace App Toolkit.
 
-It uses React in combination with TypeScript, to provide great developer experience.
+Ele utiliza React em conjunto com TypeScript para proporcionar uma excelente experiência de desenvolvimento.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Scripts disponíveis
+
+No diretório do projeto, você pode executar os seguintes comandos:
 
 ### `npm run start`
 
-Runs the app in the development mode. A new browser window with your running app will be automatically opened.
+Executa o app em modo de desenvolvimento. Uma nova janela do navegador com o app em execução será aberta automaticamente.
 
-Edit a component file in `ui` and save it. The page will reload when you make changes. You may also see any errors in the console.
+Edite um arquivo de componente em `ui` e salve. A página será recarregada quando você fizer alterações. Erros aparecem no console.
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder. It correctly bundles your app in production mode and optimizes the build for the best performance.
+Constrói o app para produção na pasta `dist`. O build é empacotado em modo de produção e otimizado para melhor desempenho.
 
 ### `npm run deploy`
 
-Builds the app and deploys it to the specified environment in `app.config.json`.
+Constrói o app e o implanta no ambiente especificado em `app.config.json`.
 
-### `npm run uninstall
+### `npm run uninstall`
 
-Uninstalls the app from the specified environment in `app.config.json`.
+Desinstala o app do ambiente especificado em `app.config.json`.
 
 ### `npm run generate:function`
 
-Generates a new serverless function for your app in the `api` folder.
+Gera uma nova função serverless para seu app na pasta `api`.
 
 ### `npm run update`
 
-Updates @dynatrace-scoped packages to the latest version and applies automatic migrations.
+Atualiza os pacotes com escopo `@dynatrace` para a versão mais recente e aplica migrações automáticas.
 
 ### `npm run info`
 
-Outputs the CLI and environment information.
+Exibe informações sobre o CLI e o ambiente.
 
 ### `npm run help`
 
-Outputs help for the Dynatrace App Toolkit.
+Exibe a ajuda do Dynatrace App Toolkit.
 
-## Learn more
+---
 
-You can find more information on how to use all the features of the new Dynatrace Platform in [Dynatrace Developer](https://dt-url.net/developers).
+## Aprenda mais
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Você pode encontrar mais informações sobre como usar todos os recursos da nova plataforma Dynatrace em Dynatrace Developer: https://dt-url.net/developers.
+
+Para aprender React, confira a documentação oficial do React: https://reactjs.org/.
