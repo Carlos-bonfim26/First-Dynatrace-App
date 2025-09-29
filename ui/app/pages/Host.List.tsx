@@ -10,6 +10,7 @@ import { useDql } from '@dynatrace-sdk/react-hooks';
 import { CPU_USAGE_QUERY, getHostAvgCpuQuery, getHostCpuUsageQuery } from '../queries';
 import Colors from '@dynatrace/strato-design-tokens/colors';
 
+// Define a forma dos dados do host
 type HostData = {
   hostId: string;
   hostName: string;
@@ -21,11 +22,12 @@ type HostData = {
   user: number;
 };
 
+// Componente principal para exibir a lista de hosts
 export const HostList = () => {
   const result = useDql({
     query: CPU_USAGE_QUERY,
   });
-
+// Definir as colunas da tabela usando useMemo para otimização
   const columns = useMemo<DataTableV2ColumnDef<ResultRecord | null>[]>(
     () => [
       {
@@ -41,6 +43,7 @@ export const HostList = () => {
         width: 'content',
       },
       {
+        // Coluna personalizada para exibir o uso da CPU como um gráfico de barras
         id: 'cpuUsage',
         header: 'CPU Usage',
         columnType: 'meterbar',
@@ -58,6 +61,7 @@ export const HostList = () => {
         width: '1fr',
       },
       {
+        // Coluna personalizada para exibir a média de uso da CPU como um gráfico de linhas
         id: 'cpuAvg',
         header: 'Average CPU %',
         columnType: 'sparkline',
@@ -72,13 +76,17 @@ export const HostList = () => {
   );
 
   return (
+    // Layout principal com barra de título e tabela de dados
     <Flex width="100%" flexDirection="column" justifyContent="center" gap={16}>
       <TitleBar>
         <TitleBar.Title>Hosts Insights</TitleBar.Title>
       </TitleBar>
+      {/* Exibir indicador de carregamento ou tabela de dados */}
       {result.isLoading && <ProgressCircle />}
+      {/* Exibir a tabela de dados se os dados estiverem disponíveis */}
       {result.data && (
         <DataTableV2 data={result.data.records} columns={columns} fullWidth>
+          {/* Ações de linha para cada host, permitindo visualizar insights detalhados */}
           <DataTableV2.RowActions>
             {(row: HostData) => (
               <IntentButton
